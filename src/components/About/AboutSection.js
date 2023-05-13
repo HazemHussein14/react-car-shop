@@ -7,7 +7,7 @@ const AboutSection = () => {
   return (
     <section id='about' className="section-spacing">
       <div className="container lg:flex lg:gap-40 xl:justify-between">
-        <div className="mt-10 flex-1">
+        <div className="flex-1 mt-10">
         <AboutTitle/>
           <p className="mb-8 lg:text-xl">
             YourCar is a luxury car dealership that offers a personalized and
