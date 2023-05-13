@@ -4,7 +4,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CustomDot from "./Dots";
 
-import { fetchData } from "../../utils/FetchData";
+import { fetchData } from "../../utils/fetch-data";
 
 const responsive = {
   superLargeDesktop: {
@@ -55,15 +55,15 @@ const MultiCarousel = () => {
         keyBoardControl={true}
       >
         {carsData.map((car) => (
-          <div key={car.name} className="flex flex-col h-[600px] first-of-type:mb-5 shadow-lg mr-5">
+          <div key={car.name} className="flex flex-col h-[600px] mb-5 shadow-lg mr-5 bg-white">
             <img src={car.image} alt={car.name} className="w-[311px] m-auto"/>
             <div className="p-3 md:p-6">
-              <article className="text-center mb-8">
+              <article className="mb-8 text-center">
               <h3 className="text-2xl text-[#741906] uppercase font-bold ">{car.class}</h3>
               <p className="text-[16px]">{car.name}</p>
               </article>
               <p className="mb-8">{car.description}</p>
-              <div className="flex itmes-center justify-between">
+              <div className="flex justify-between itmes-center">
                 <div>
                   <div>
                     <p className="text-[18px] text-[#741906]">
