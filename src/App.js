@@ -7,6 +7,7 @@ import CarsSection from "./components/Cars/CarsSection";
 import GallerySection from "./components/Gallery/GallerySection";
 import TestimonialsSection from "./components/Testimonials/TestimonialsSection";
 import LogosSection from "./components/Logos/LogosSection";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <GallerySection />
       <TestimonialsSection />
       <LogosSection />
+      <Footer />
     </Fragment>
   );
 }
