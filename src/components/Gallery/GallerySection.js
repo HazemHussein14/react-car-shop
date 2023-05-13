@@ -1,8 +1,11 @@
+import GalleryImages from "./GalleryImages";
 
 const GallerySection = () => {
   return (
-    <div className="section-spacing">GallerySection</div>
-  )
-}
+    <section>
+      <GalleryImages/>
+    </section>
+  );
+};
 
-export default GallerySection
+export default GallerySection;
