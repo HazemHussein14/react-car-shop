@@ -6,6 +6,8 @@ import CustomDot from "./Dots";
 
 import { fetchData } from "../../utils/fetch-data";
 
+import Car from "./Car";
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -48,44 +50,23 @@ const MultiCarousel = () => {
         swipeable={true}
         draggable={true}
         showDots={true}
-        customDot={<CustomDot/>}
+        customDot={<CustomDot />}
         renderDotsOutside
         transitionDuration={500}
         removeArrowOnDeviceType={["tablet", "mobile"]}
         keyBoardControl={true}
       >
-        {carsData.map((car) => (
-          <div key={car.name} className="flex flex-col h-[600px] mb-5 shadow-lg mr-5 bg-white">
-            <img src={car.image} alt={car.name} className="w-[311px] m-auto"/>
-            <div className="p-3 md:p-6">
-              <article className="mb-8 text-center">
-              <h3 className="text-2xl text-[#741906] uppercase font-bold ">{car.class}</h3>
-              <p className="text-[16px]">{car.name}</p>
-              </article>
-              <p className="mb-8">{car.description}</p>
-              <div className="flex justify-between itmes-center">
-                <div>
-                  <div>
-                    <p className="text-[18px] text-[#741906]">
-                    <i className="fa-solid fa-user-group text-[#12273D] mr-4"></i>
-                    {car.seats} Seats
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-[18px] text-[#741906]">
-                    <i className="fa-solid fa-suitcase text-[#12273D] mr-4"></i>
-                    {car.luggage} Luggage
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <button className="px-2 py-1 text-white text-center bg-[#741906] rounded-l-md"><i className="fa-solid fa-minus text-[12px]"></i></button>
-                  0
-                  <button className="px-2 py-1 text-white text-center bg-[#741906] rounded-r-md"><i className="fa-solid fa-plus text-[12px]"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
+        {carsData.map((car, idx) => (
+          <Car
+            key={idx}
+            id={idx}
+            name={car.name}
+            carClass={car.class}
+            image={car.image}
+            description={car.description}
+            luggage={car.luggage}
+            seats={car.seats}
+          />
         ))}
       </Carousel>
     </div>

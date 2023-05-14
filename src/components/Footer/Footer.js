@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-white shadow-[0_-3px_2px_rgba(0,0,0,0.03)] p-10">
+    <footer id="contact" className="bg-white shadow-[0_-3px_2px_rgba(0,0,0,0.03)] p-10">
       <div className="container text-center lg:grid lg:grid-cols-3 lg:gap-5">
         <article className="mb-6 lg:text-start lg:mb-0">
           <h3 className="text-3xl text-[#741906] mb-3">

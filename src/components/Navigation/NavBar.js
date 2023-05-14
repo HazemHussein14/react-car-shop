@@ -1,10 +1,14 @@
 import NavLinks from "./NavLinks";
-import SlideNav from "./SlideNav";
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import SlideNav from "./SlideNav";
+import Cart from "../Cart/Cart";
 
 function NavBar() {
   const [isSideOpen, setIsSideOpen] = useState(false);
   const [sticky, setSticky] = useState("");
+  const [showCart, setShowCart] = useState(false);
+  const cartQuatity = useSelector((state) => state.totalQuatity);
 
   const toggleSideNav = () => {
     setIsSideOpen((prevState) => !prevState);
@@ -14,6 +18,10 @@ function NavBar() {
     if (val) {
       toggleSideNav();
     }
+  };
+
+  const showCartHandler = () => {
+    setShowCart((prevState) => !prevState);
   };
 
   useEffect(() => {
@@ -36,16 +44,24 @@ function NavBar() {
       }`}
     >
       <nav
-        className={`flex text-[#12273D] ${
-          sticky ? "lg:text-[#12273D]" : "lg:text-white"
-        } items-center justify-between p-4`}
+        className={`flex items-center justify-between p-4 ${
+          !sticky && "lg:text-white"
+        }`}
       >
         <a href="#home" className="text-3xl">
-          <strong>Your</strong>Cart
+          <b>Your</b>Cart
         </a>
-        <div className="flex gap-5">
+        <div className="flex items-center gap-5">
           <NavLinks checkIsVisited={checkIsVisited} isSticky={sticky} />
-          <button className="text-2xl">
+          <button
+            className={`relative text-2xl transition duration-300 hover:text-[--primary-color] ${
+              showCart && "text-[--primary-color]"
+            }`}
+            onClick={showCartHandler}
+          >
+            <span className="absolute w-[20px] h-[20px] -top-1 -right-3 text-[--secondary-color] font-bold text-[12px] text-center rounded bg-[#F8D7A4] flex items-center justify-center">
+              {cartQuatity}
+            </span>
             <i className="fa-solid fa-cart-shopping"></i>
           </button>
           <button className="text-2xl lg:hidden" onClick={toggleSideNav}>
@@ -58,6 +74,7 @@ function NavBar() {
         </div>
 
         <SlideNav isSideOpen={isSideOpen} checkIsVisited={checkIsVisited} />
+        <Cart showCart={showCart} />
       </nav>
     </header>
   );

@@ -2,7 +2,7 @@ import GalleryImages from "./GalleryImages";
 
 const GallerySection = () => {
   return (
-    <section>
+    <section id="fleet">
       <GalleryImages/>
     </section>
   );

@@ -7,16 +7,25 @@
     box-sizing: border-box;
   }
 
+  :root {
+    --primary-color: #741906;
+    --secondary-color: #12273d;
+  }
+
   html {
     font-family: "Nunito Sans", sans-serif;
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
 
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   body {
     overflow-x: hidden;
     background-color: #fafafa;
-    color: #12273D;
+    color: var(--secondary-color);
   }
 
   h1,
@@ -58,12 +67,12 @@
 
   #cars ul:last-child {
     bottom: initial;
-    z-index: 1;
   }
 
   #cars button[aria-label] {
-    background-color: #741906;
-    }
+    background-color: var(--primary-color);
+    z-index: 20;
+  }
 }
 
 /* - SPACING SYSTEM (px)
