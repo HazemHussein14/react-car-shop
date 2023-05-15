@@ -1,13 +1,13 @@
 const images = [
-  { path: "images/test1.jpg" },
-  { path: "images/test2.jpg" },
-  { path: "images/test3.jpg" },
-  { path: "images/test4.jpg" },
-  { path: "images/test5.jpg" },
-  { path: "images/test6.jpg" },
-  { path: "images/test7.jpg" },
-  { path: "images/test8.jpg" },
-  { path: "images/test9.jpg" },
+  { path: "images/test1.webp" },
+  { path: "images/test2.webp" },
+  { path: "images/test3.webp" },
+  { path: "images/test4.webp" },
+  { path: "images/test5.webp" },
+  { path: "images/test6.webp" },
+  { path: "images/test7.webp" },
+  { path: "images/test8.webp" },
+  { path: "images/test9.webp" },
 ];
 
 const Image = ({ src, alt }) => {

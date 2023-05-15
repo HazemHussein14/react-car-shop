@@ -49,7 +49,7 @@ function NavBar() {
         }`}
       >
         <a href="#home" className="text-3xl">
-          <b>Your</b>Cart
+          <b>Your</b>Car
         </a>
         <div className="flex items-center gap-5">
           <NavLinks checkIsVisited={checkIsVisited} isSticky={sticky} />
@@ -74,7 +74,7 @@ function NavBar() {
         </div>
 
         <SlideNav isSideOpen={isSideOpen} checkIsVisited={checkIsVisited} />
-        <Cart showCart={showCart} />
+        <Cart showCart={showCart} setShowCart={setShowCart}/>
       </nav>
     </header>
   );

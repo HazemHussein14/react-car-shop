@@ -1,11 +1,11 @@
 const logos = [
-  { path: "images/logo1.jpg" },
-  { path: "images/logo2.jpg" },
-  { path: "images/logo3.jpg" },
-  { path: "images/logo4.jpg" },
+  { path: "images/logo1.webp" },
+  { path: "images/logo2.webp" },
+  { path: "images/logo3.webp" },
+  { path: "images/logo4.webp" },
   { path: "images/logo5.jpg" },
-  { path: "images/logo6.jpg" },
-  { path: "images/logo7.jpg" },
+  { path: "images/logo6.webp" },
+  { path: "images/logo7.webp" },
   { path: "images/logo8.jpg" },
 ];
 

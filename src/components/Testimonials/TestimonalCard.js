@@ -78,6 +78,7 @@ const TestimonalCard = () => {
                 ? "bg-[#F8D7A4]"
                 : "bg-white"
             }`}
+            aria-label={`move to slide ${idx}`}
           ></button>
         ))}
       </div>

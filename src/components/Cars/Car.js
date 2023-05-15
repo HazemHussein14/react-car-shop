@@ -59,13 +59,15 @@ const Car = ({ id, name, carClass, image, seats, luggage, description }) => {
             <button
               className="px-2 py-1 text-white text-center bg-[--primary-color] rounded-l-md"
               onClick={removeItemFromCart}
+              aria-label="Remove item from cart"
             >
               <i className="fa-solid fa-minus text-[12px]"></i>
             </button>
             <span>{cartItem ? cartItem.quantity : 0}</span>
-            <button
+            <button 
               className="px-2 py-1 text-white text-center bg-[--primary-color] rounded-r-md"
               onClick={addToCartHandler}
+              aria-label="Add item to cart"
             >
               <i className="fa-solid fa-plus text-[12px]"></i>
             </button>

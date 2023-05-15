@@ -23,7 +23,7 @@ const Footer = () => {
           <p className="mb-5">
             Subscribe to our news letter for updates, news and exclusive offers
           </p>
-          <form className="lg:flex lg:items-center lg:gap-4">
+          <form className="lg:flex lg:items-center lg:gap-4 lg:justify-center">
             <input
               type="email"
               placeholder="Email"
@@ -31,7 +31,7 @@ const Footer = () => {
             />
             <button
               type="button"
-              className="block mx-auto bg-[#741906] text-white py-2 px-4 cursor-pointer font-bold"
+              className="block mx-auto lg:m-0 bg-[#741906] text-white py-2 px-4 cursor-pointer font-bold"
             >
               Subscribe
             </button>
@@ -64,17 +64,17 @@ const Footer = () => {
         </div>
           <ul className="flex items-center justify-center gap-3 mb-4 text-3xl lg:col-span-3">
             <li>
-              <a href="https://www.facebook.com">
+              <a aria-label="facebook" href="https://www.facebook.com">
                 <i className="fa-brands fa-facebook"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.twitter.com">
+              <a aria-label="twitter" href="https://www.twitter.com">
                 <i className="fa-brands fa-twitter"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com">
+              <a aria-label="instagram" href="https://www.instagram.com">
                 <i className="fa-brands fa-instagram"></i>
               </a>
             </li>

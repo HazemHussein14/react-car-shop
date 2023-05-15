@@ -1,6 +1,6 @@
 
-import AboutImage from '../../assets/about.png'
-import AboutBg from '../../assets/about-bg.png'
+import AboutImage from '../../assets/about.webp'
+import AboutBg from '../../assets/about-bg.webp'
 import AboutTitle from './AboutTitle';
 
 const AboutSection = () => {
