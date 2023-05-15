@@ -3,7 +3,6 @@ import { cartActions } from "../../store";
 
 const Car = ({ id, name, carClass, image, seats, luggage, description }) => {
   const dispatch = useDispatch();
-  const totalQuantity = useSelector((state) => state.totalQuatity);
   const cartItem = useSelector((state) =>
     state.items.find((item) => item.id === id)
   );
@@ -20,7 +19,7 @@ const Car = ({ id, name, carClass, image, seats, luggage, description }) => {
   };
 
   const removeItemFromCart = () => {
-    if (totalQuantity <= 0) {
+    if (!cartItem) {
       return;
     }
     dispatch(cartActions.removeItemFromCart(id));
