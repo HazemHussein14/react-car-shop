@@ -15,7 +15,7 @@ const cartSlice = createSlice({
       if (!existingItem) {
         state.items.push({
           id: newItem.id,
-          class: newItem.class,
+          class: newItem.carClass,
           name: newItem.name,
           image: newItem.image,
           quantity: 1,
@@ -36,12 +36,12 @@ const cartSlice = createSlice({
         }
       }
     },
-    
+
     removeWholeItemFromCart(state, action) {
       const id = action.payload;
       const item = state.items.find((item) => item.id === id);
       if (item) {
-        state.totalQuatity-= item.quantity;
+        state.totalQuatity -= item.quantity;
         item.quantity = 0;
         state.items = state.items.filter((item) => item.id !== id);
       }
@@ -60,8 +60,8 @@ const saveState = (state) => {
 };
 
 const loadState = () => {
-    const savedState = localStorage.getItem("cart");
-    return JSON.parse(savedState);
+  const savedState = localStorage.getItem("cart");
+  return JSON.parse(savedState);
 };
 
 const store = configureStore({
