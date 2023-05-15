@@ -23,13 +23,11 @@ const CartItem = ({ name, carClass, image, quantity, id }) => {
     dispatch(cartActions.removeWholeItemFromCart(id));
   };
 
-  console.log(`car name: ${name} -- car class: ${carClass}`);
-
   return (
-    <li className="flex items-center gap-10 p-3 text-[black] bg-white grow-0 rounded">
+    <li className="flex items-center justify-between gap-10 p-3 text-[black] bg-white grow-0 rounded">
       <div>
-        <h4 className="mb-4">{carClass}</h4>
-        <p className="mb-4">{name}</p>
+        <h4 className="mb-2 text-lg text-[--primary-color] font-bold uppercase">{carClass}</h4>
+        <p className="mb-2">{name}</p>
         <div className="flex items-center gap-3">
           <button
             className="px-2 py-1 text-white text-center bg-[--primary-color] rounded-l-md"
@@ -52,7 +50,7 @@ const CartItem = ({ name, carClass, image, quantity, id }) => {
           </button>
         </div>
       </div>
-      <img src={image} alt={name} className="w-[100px]" />
+      <img src={image} alt={name} className="w-[100px] md:w-[130px]" />
     </li>
   );
 };
