@@ -8,7 +8,7 @@ function NavBar() {
   const [isSideOpen, setIsSideOpen] = useState(false);
   const [sticky, setSticky] = useState("");
   const [showCart, setShowCart] = useState(false);
-  const cartQuatity = useSelector((state) => state.totalQuatity);
+  const cartQuantity = useSelector((state) => state.totalQuantity);
 
   const toggleSideNav = () => {
     setIsSideOpen((prevState) => !prevState);
@@ -60,7 +60,7 @@ function NavBar() {
             onClick={showCartHandler}
           >
             <span className="absolute w-[20px] h-[20px] -top-1 -right-3 text-[--secondary-color] font-bold text-[12px] text-center rounded bg-[#F8D7A4] flex items-center justify-center">
-              {cartQuatity}
+              {cartQuantity}
             </span>
             <i className="fa-solid fa-cart-shopping"></i>
           </button>
@@ -79,4 +79,5 @@ function NavBar() {
     </header>
   );
 }
+
 export default NavBar;
