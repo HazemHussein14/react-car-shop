@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-image": "url('assets/hero.png')",
-        "services-image": "url('assets/services.jpg')",
+        "hero-image": "url('assets/hero.webp')",
+        "services-image": "url('assets/services.webp')",
       },
     },
   },
